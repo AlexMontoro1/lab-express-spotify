@@ -1,0 +1,22 @@
+<div  class="title">
+        <h3>Albums for: {{this.nameIn}}</h3>
+    </div>
+<div class="container">
+    
+    
+        {{#each this.allAlbums}}
+        <div class="artistContainer">
+            
+        
+    
+     {{#if this.images.[0]}}
+        <img src="{{this.images.[0].url}}" width="250px" height="200px" alt="album">
+        {{/if}}
+        <p>{{this.name}}</p>
+        <button>
+            <a href="/albums/tracks/{{this.id}}"> View Tracks </a>
+        </button>
+        
+        </div>
+        {{/each}}
+</div>
